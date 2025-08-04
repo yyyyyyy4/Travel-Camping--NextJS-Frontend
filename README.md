@@ -1,4 +1,4 @@
-# Travel UI/UX for Camping - Next.js Web Application
+# Travel for Camping - Next.js Frontend UI/UX Web Application
 
 ---
 
