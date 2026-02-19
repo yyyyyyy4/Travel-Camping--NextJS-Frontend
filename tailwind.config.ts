@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -35,6 +37,11 @@ module.exports = {
         'feature-bg': "url('/feature-bg.png')",
         pattern: "url('/pattern.png')",
         'pattern-2': "url('/pattern-bg.png')",
+      },
+      // fonts
+      fontFamily: {
+        // Place 'Inter' first, followed by the system fallback fonts
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       screens: {
         xs: '400px',
