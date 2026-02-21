@@ -1,4 +1,5 @@
 // ...existing code...
+import Image from 'next/image'
 import Button from './Button'
 
 const Hero = () => {
@@ -7,13 +8,13 @@ const Hero = () => {
       <div className="hero-map" />
 
       <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
-        <img 
+        <Image
           src="/camp.svg"
           alt="camp"
           width={50}
           height={50}
-          className="absolute left-[-5px] top-[-30px] w-10 lg:w-[50px]"
-          style={{ width: 'auto', height: 'auto' }}
+          className="absolute left-[-5px] top-[-30px] w-10 h-10 lg:w-[50px] lg:h-[50px]"
+          unoptimized
         />
         <h1 className="bold-52 lg:bold-88">Putuk Truno Camp Area</h1>
         <p className="regular-16 mt-6 text-gray-30 xl:max-w-[520px]">
@@ -23,14 +24,15 @@ const Hero = () => {
         <div className="my-11 flex flex-wrap gap-5">
           <div className="flex items-center gap-2">
             {Array(5).fill(1).map((_, index) => (
-              <img 
-                src="/star.svg"
-                key={index}
-                alt="star"
-                width={24}
-                height={24}
-                style={{ width: 'auto', height: 'auto' }}
-              />
+              <Image
+                  key={index}
+                  src="/star.svg"
+                  alt="star"
+                  width={24}
+                  height={24}
+                  className="h-6 w-6"
+                  unoptimized
+                />
             ))}
           </div>
 
@@ -61,7 +63,14 @@ const Hero = () => {
            <div className="flex flex-col">
             <div className="flexBetween">
               <p className="regular-16 text-gray-20">Location</p>
-              <img src="/close.svg" alt="close" width={24} height={24} style={{ width: 'auto', height: 'auto' }} />
+              <Image
+                src="/close.svg"
+                alt="close"
+                width={24}
+                height={24}
+                className="h-6 w-6"
+                unoptimized
+              />
             </div>
             <p className="bold-20 text-white">Aguas Calientes</p>
           </div>
